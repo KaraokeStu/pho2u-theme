@@ -2,7 +2,8 @@
 
 html {
     /* Change default typefaces here */
-    font-family: serif;
+    font-family: Lato,sans-serif;
+    color: #f5f3f1;
     font-size: $baseFontSize / 16 * 100%;
     // Make everything look a little nicer in webkit
     -webkit-font-smoothing: antialiased;

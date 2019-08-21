@@ -401,7 +401,7 @@ html {
 }
 
 body {
-	background: #fff;
+	background: #000;
 	/* Fallback for when there is no custom background color defined. */
 }
 
@@ -546,15 +546,15 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #66CCFF;
 }
 
 a:visited {
-	color: purple;
+	color: #66CCFF;
 }
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
+	color: #f5f3f1;
 }
 
 a:focus {
@@ -571,8 +571,7 @@ a:hover, a:active {
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
-	width: 100%;
+	float: right;
 }
 
 .main-navigation ul {
@@ -580,6 +579,7 @@ a:hover, a:active {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	bottom: 0;
 }
 
 .main-navigation ul ul {
@@ -613,11 +613,35 @@ a:hover, a:active {
 .main-navigation li {
 	float: left;
 	position: relative;
+	padding-left: 12px;
+	padding-right: 12px;
 }
 
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+}
+
+.social-navigation {
+	clear: both;
+	display: block;
+	float: right;
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+.social-navigation ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	bottom: 0;
+}
+
+.social-navigation li {
+	float: left;
+	position: relative;
+	padding-left: 12px;
+	padding-right: 12px;
 }
 
 /* Small menu. */
@@ -656,6 +680,8 @@ a:hover, a:active {
 	text-align: right;
 	width: 50%;
 }
+
+.current-menu-item a { color: #f5f3f1; }
 
 /*--------------------------------------------------------------
 # Accessibility
