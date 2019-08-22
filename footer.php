@@ -13,20 +13,18 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'pho2u' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'pho2u' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'pho2u' ), 'pho2u', '<a href="http://underscores.me/">Me</a>' );
-				?>
-		</div><!-- .site-info -->
+	<footer id="colophon" class="site-footer ui container grid">
+		<div class="sixteen wide mobile only right floated column">
+				<nav id="social-navigation" class="social-navigation">
+					<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-2',
+						'menu_id'        => 'social-media',
+					) );
+					?>
+				</nav>
+		</div>
+		<div class="sixteen wide center aligned column">&copy; <?php echo date("Y"); ?> - Site Design by <a href="https://fdsoftware.co.uk" target="_blank">FD Software</a></div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

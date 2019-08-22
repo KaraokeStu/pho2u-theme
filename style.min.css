@@ -85,9 +85,9 @@ a:hover,a:active{outline:0}
 .main-navigation ul li:hover>ul,.main-navigation ul li.focus>ul{left:auto}
 .main-navigation li{float:left;position:relative;padding-left:12px;padding-right:12px}
 .main-navigation a{display:block;text-decoration:none}
-.social-navigation{clear:both;display:block;float:right;padding-top:24px;padding-bottom:24px}
+.social-navigation{clear:both;display:block;float:right}
 .social-navigation ul{list-style:none;margin:0;padding-left:0;bottom:0}
-.social-navigation li{float:left;position:relative;padding-left:12px;padding-right:12px}
+.social-navigation li{float:left;position:relative;padding-left:2px;padding-right:2px}
 .menu-toggle,.main-navigation.toggled ul{display:block}
 .site-main .comment-navigation,.site-main .posts-navigation,.site-main .post-navigation{margin:0 0 1.5em;overflow:hidden}
 .comment-navigation .nav-previous,.posts-navigation .nav-previous,.post-navigation .nav-previous{float:left;width:50%}
@@ -148,7 +148,10 @@ td,th{padding:0;line-height:24px}
 code{vertical-align:bottom}
 .lead{font-size:1.414rem}
 .hug{margin-top:0}
-.site-branding{margin-left:2em}
+.site-branding{min-width:2em}
+#fixedmenu{position:fixed;z-index:101;margin:0;width:100%;top:0;left:0;right:auto;bottom:auto;overflow-y:visible;height:10em;background-color:#0a0a0a}
+#content{background-color:#0a0a0a;z-index:100;position:relative}
+.promo-video{width:100%;height:auto;overflow:hidden;margin-top:-50px;margin-bottom:-100px;z-index:-1;position:relative}
 /*! # Semantic UI 2.4.1 - Container http://github.com/semantic-org/semantic-ui/ Released under the MIT license http://opensource.org/licenses/MIT */.ui.container{display:block;max-width:100% !important}
 .ui.text.container{font-family:'Lato','Helvetica Neue',Arial,Helvetica,sans-serif;max-width:700px !important;line-height:1.5}
 .ui.text.container{font-size:1.14285714rem}
@@ -288,8 +291,44 @@ code{vertical-align:bottom}
 .ui.grid>.black.row,.ui.grid>.black.column,.ui.grid>.row>.black.column{background-color:#1b1c1d !important;color:#fff}
 .ui[class*="equal width"].grid>.column:not(.row),.ui[class*="equal width"].grid>.row>.column,.ui.grid>[class*="equal width"].row>.column{display:inline-block;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}
 .ui[class*="equal width"].grid>.wide.column,.ui[class*="equal width"].grid>.row>.wide.column,.ui.grid>[class*="equal width"].row>.wide.column{-webkit-box-flex:0;-ms-flex-positive:0;flex-grow:0}
+/*! # Semantic UI 2.4.1 - Image http://github.com/semantic-org/semantic-ui/ Released under the MIT license http://opensource.org/licenses/MIT */.ui.image{position:relative;display:inline-block;vertical-align:middle;max-width:100%;background-color:transparent}
+img.ui.image{display:block}
+.ui.image svg,.ui.image img{display:block;max-width:100%;height:auto}
+.ui.hidden.images,.ui.hidden.image{display:none}
+.ui.hidden.transition.images,.ui.hidden.transition.image{display:block;visibility:hidden}
+.ui.images>.hidden.transition{display:inline-block;visibility:hidden}
+.ui.disabled.images,.ui.disabled.image{cursor:default;opacity:.45}
+.ui.inline.image,.ui.inline.image svg,.ui.inline.image img{display:inline-block}
+.ui.top.aligned.images .image,.ui.top.aligned.image,.ui.top.aligned.image svg,.ui.top.aligned.image img{display:inline-block;vertical-align:top}
+.ui.middle.aligned.images .image,.ui.middle.aligned.image,.ui.middle.aligned.image svg,.ui.middle.aligned.image img{display:inline-block;vertical-align:middle}
+.ui.bottom.aligned.images .image,.ui.bottom.aligned.image,.ui.bottom.aligned.image svg,.ui.bottom.aligned.image img{display:inline-block;vertical-align:bottom}
+.ui.rounded.images .image,.ui.rounded.image,.ui.rounded.images .image>*,.ui.rounded.image>*{border-radius:.3125em}
+.ui.bordered.images .image,.ui.bordered.images img,.ui.bordered.images svg,.ui.bordered.image img,.ui.bordered.image svg,img.ui.bordered.image{border:1px solid rgba(0,0,0,0.1)}
+.ui.circular.images,.ui.circular.image{overflow:hidden}
+.ui.circular.images .image,.ui.circular.image,.ui.circular.images .image>*,.ui.circular.image>*{border-radius:500rem}
+.ui.fluid.images,.ui.fluid.image,.ui.fluid.images img,.ui.fluid.images svg,.ui.fluid.image svg,.ui.fluid.image img{display:block;width:100%;height:auto}
+.ui.avatar.images .image,.ui.avatar.images img,.ui.avatar.images svg,.ui.avatar.image img,.ui.avatar.image svg,.ui.avatar.image{margin-right:.25em;display:inline-block;width:2em;height:2em;border-radius:500rem}
+.ui.spaced.image{display:inline-block !important;margin-left:.5em;margin-right:.5em}
+.ui[class*="left spaced"].image{margin-left:.5em;margin-right:0}
+.ui[class*="right spaced"].image{margin-left:0;margin-right:.5em}
+.ui.floated.image,.ui.floated.images{float:left;margin-right:1em;margin-bottom:1em}
+.ui.right.floated.images,.ui.right.floated.image{float:right;margin-right:0;margin-bottom:1em;margin-left:1em}
+.ui.floated.images:last-child,.ui.floated.image:last-child{margin-bottom:0}
+.ui.centered.images,.ui.centered.image{margin-left:auto;margin-right:auto}
+.ui.mini.images .image,.ui.mini.images img,.ui.mini.images svg,.ui.mini.image{width:35px;height:auto;font-size:.78571429rem}
+.ui.tiny.images .image,.ui.tiny.images img,.ui.tiny.images svg,.ui.tiny.image{width:80px;height:auto;font-size:.85714286rem}
+.ui.small.images .image,.ui.small.images img,.ui.small.images svg,.ui.small.image{width:150px;height:auto;font-size:.92857143rem}
+.ui.medium.images .image,.ui.medium.images img,.ui.medium.images svg,.ui.medium.image{width:300px;height:auto;font-size:1rem}
+.ui.large.images .image,.ui.large.images img,.ui.large.images svg,.ui.large.image{width:450px;height:auto;font-size:1.14285714rem}
+.ui.big.images .image,.ui.big.images img,.ui.big.images svg,.ui.big.image{width:600px;height:auto;font-size:1.28571429rem}
+.ui.huge.images .image,.ui.huge.images img,.ui.huge.images svg,.ui.huge.image{width:800px;height:auto;font-size:1.42857143rem}
+.ui.massive.images .image,.ui.massive.images img,.ui.massive.images svg,.ui.massive.image{width:960px;height:auto;font-size:1.71428571rem}
+.ui.images{font-size:0;margin:0 -0.25rem 0}
+.ui.images .image,.ui.images>img,.ui.images>svg{display:inline-block;margin:0 .25rem .5rem}
 @font-face{font-family:'socicon';src:url("assets/font/socicon.eot");src:url("assets/font/socicon.eot?#iefix") format("embedded-opentype"),url("assets/font/socicon.woff") format("woff"),url("assets/font/socicon.ttf") format("truetype"),url("assets/font/socicon.svg#sociconregular") format("svg");font-weight:normal;font-style:normal;text-transform:initial}
-.socicon::before,[class^="socicon-"]::before,[class*=" socicon-"]::before{display:inline-block;font-family:'socicon';speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.socicon::before,[class^="socicon-"]::before,[class*=" socicon-"]::before{display:inline-block;font-family:'socicon';speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:10px;background-size:100% 200%;-webkit-transition:background-position .2s;transition:background-position .2s}
+.socicon:hover::before,[class^="socicon-"]:hover::before,[class*=" socicon-"]:hover::before{background-position:0 100%}
+.socicon a:hover,a:focus,a:active{outline:0}
 .socicon-airbnb::before{content:"\e00e"}
 .socicon-amazon::before{content:"\e05c"}
 .socicon-amplement::before{content:"\e070"}
@@ -320,6 +359,7 @@ code{vertical-align:bottom}
 .socicon-endomondo::before{content:"\e075"}
 .socicon-envato::before{content:"\e026"}
 .socicon-facebook::before{content:"\e041"}
+.socicon-facebook::before{background-image:-webkit-gradient(linear,left top,left bottom,color-stop(50%,transparent),color-stop(50%,#4267b2));background-image:linear-gradient(to bottom,transparent 50%,#4267b2 50%)}
 .socicon-feedburner::before{content:"\e048"}
 .socicon-filmweb::before{content:"\e076"}
 .socicon-five-hundred-px::before{content:"\e056"}
@@ -333,17 +373,20 @@ code{vertical-align:bottom}
 .socicon-google::before{content:"\e067"}
 .socicon-google-play::before{content:"\e02b"}
 .socicon-google-plus::before{content:"\e042"}
+.socicon-google-plus::before{background-image:-webkit-gradient(linear,left top,left bottom,color-stop(50%,transparent),color-stop(50%,#db4437));background-image:linear-gradient(to bottom,transparent 50%,#db4437 50%)}
 .socicon-grooveshark::before{content:"\e04f"}
 .socicon-houzz::before{content:"\e00a"}
 .socicon-icq::before{content:"\e05d"}
 .socicon-identica::before{content:"\e034"}
 .socicon-imdb::before{content:"\e064"}
 .socicon-instagram::before{content:"\e057"}
+.socicon-instagram::before{background-image:-webkit-gradient(linear,left top,left bottom,color-stop(50%,transparent),color-stop(50%,#c32aa3));background-image:linear-gradient(to bottom,transparent 50%,#c32aa3 50%)}
 .socicon-istock::before{content:"\e004"}
 .socicon-itunes::before{content:"\e06b"}
 .socicon-lanyrd::before{content:"\e016"}
 .socicon-last-fm::before{content:"\e050"}
 .socicon-linkedin::before{content:"\e049"}
+.socicon-linkedin::before{background-image:-webkit-gradient(linear,left top,left bottom,color-stop(50%,transparent),color-stop(50%,#007bb5));background-image:linear-gradient(to bottom,transparent 50%,#007bb5 50%)}
 .socicon-mail::before{content:"\e01f"}
 .socicon-medium::before{content:"\e06d"}
 .socicon-meetup::before{content:"\e03c"}
@@ -360,6 +403,7 @@ code{vertical-align:bottom}
 .socicon-paypal::before{content:"\e00c"}
 .socicon-periscope::before{content:"\e00f"}
 .socicon-pinterest::before{content:"\e043"}
+.socicon-pinterest::before{background-image:-webkit-gradient(linear,left top,left bottom,color-stop(50%,transparent),color-stop(50%,#bd081c));background-image:linear-gradient(to bottom,transparent 50%,#bd081c 50%)}
 .socicon-playstation::before{content:"\e03d"}
 .socicon-play-store::before{content:"\e02b"}
 .socicon-pocket::before{content:"\e01e"}
@@ -395,9 +439,11 @@ code{vertical-align:bottom}
 .socicon-tumblr::before{content:"\e059"}
 .socicon-twitch::before{content:"\e05a"}
 .socicon-twitter::before{content:"\e040"}
+.socicon-twitter::before{background-image:-webkit-gradient(linear,left top,left bottom,color-stop(50%,transparent),color-stop(50%,#1da1f2));background-image:linear-gradient(to bottom,transparent 50%,#1da1f2 50%)}
 .socicon-ventrilo::before{content:"\e07b"}
 .socicon-viadeo::before{content:"\e04a"}
 .socicon-vimeo::before{content:"\e052"}
+.socicon-vimeo::before{background-image:-webkit-gradient(linear,left top,left bottom,color-stop(50%,transparent),color-stop(50%,#1ab7ea));background-image:linear-gradient(to bottom,transparent 50%,#1ab7ea 50%)}
 .socicon-vine::before{content:"\e054"}
 .socicon-viber::before{content:"\e071"}
 .socicon-vkontakte::before{content:"\e01a"}
@@ -415,6 +461,7 @@ code{vertical-align:bottom}
 .socicon-yelp::before{content:"\e047"}
 .socicon-younow::before{content:"\e07c"}
 .socicon-youtube::before{content:"\e051"}
+.socicon-youtube::before{background-image:-webkit-gradient(linear,left top,left bottom,color-stop(50%,transparent),color-stop(50%,#f00));background-image:linear-gradient(to bottom,transparent 50%,#f00 50%)}
 .socicon-zerply::before{content:"\e02c"}
 .socicon-zomato::before{content:"\e072"}
 .socicon-zynga::before{content:"\e036"}
@@ -436,7 +483,9 @@ code{vertical-align:bottom}
 .ui.grid>.row>[class*="fourteen wide mobile"].column,.ui.grid>.column.row>[class*="fourteen wide mobile"].column,.ui.grid>[class*="fourteen wide mobile"].column,.ui.column.grid>[class*="fourteen wide mobile"].column{width:87.5% !important}
 .ui.grid>.row>[class*="fifteen wide mobile"].column,.ui.grid>.column.row>[class*="fifteen wide mobile"].column,.ui.grid>[class*="fifteen wide mobile"].column,.ui.column.grid>[class*="fifteen wide mobile"].column{width:93.75% !important}
 .ui.grid>.row>[class*="sixteen wide mobile"].column,.ui.grid>.column.row>[class*="sixteen wide mobile"].column,.ui.grid>[class*="sixteen wide mobile"].column,.ui.column.grid>[class*="sixteen wide mobile"].column{width:100% !important}
-}@media only screen and (min-width:768px) and (max-width:991px){.ui.container{width:723px;margin-left:auto !important;margin-right:auto !important}
+}@media only screen and (min-width:768px) and (max-width:991px){#fixedmenu{height:8em}
+#content{margin-top:8.5em}
+.ui.container{width:723px;margin-left:auto !important;margin-right:auto !important}
 .ui.grid.container{width:calc(723px + 2rem) !important}
 .ui.relaxed.grid.container{width:calc(723px + 3rem) !important}
 .ui.very.relaxed.grid.container{width:calc(723px + 5rem) !important}
@@ -563,7 +612,9 @@ code{vertical-align:bottom}
 .ui.grid>.row>[class*="sixteen wide widescreen"].column,.ui.grid>.column.row>[class*="sixteen wide widescreen"].column,.ui.grid>[class*="sixteen wide widescreen"].column,.ui.column.grid>[class*="sixteen wide widescreen"].column{width:100% !important}
 .ui[class*="mobile only"].grid.grid.grid:not(.computer),.ui.grid.grid.grid>[class*="mobile only"].row:not(.computer),.ui.grid.grid.grid>[class*="mobile only"].column:not(.computer),.ui.grid.grid.grid>.row>[class*="mobile only"].column:not(.computer){display:none !important}
 .ui[class*="tablet only"].grid.grid.grid:not(.computer),.ui.grid.grid.grid>[class*="tablet only"].row:not(.computer),.ui.grid.grid.grid>[class*="tablet only"].column:not(.computer),.ui.grid.grid.grid>.row>[class*="tablet only"].column:not(.computer){display:none !important}
-}@media only screen and (max-width:767px){.ui.container{width:auto !important;margin-left:1em !important;margin-right:1em !important}
+}@media only screen and (max-width:767px){#fixedmenu{height:4em}
+#content{margin-top:5em}
+.ui.container{width:auto !important;margin-left:1em !important;margin-right:1em !important}
 .ui.grid.container{width:auto !important}
 .ui.relaxed.grid.container{width:auto !important}
 .ui.very.relaxed.grid.container{width:auto !important}
