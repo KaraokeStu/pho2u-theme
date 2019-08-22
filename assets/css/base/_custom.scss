@@ -1,7 +1,7 @@
 .site-branding { min-width: 2em; }
-#fixedmenu { position: fixed; z-index: 101; margin: 0em; width: 100%; top: 0px; left: 0px; right: auto; bottom: auto; overflow-y: visible; height: 10em; background-color:#0a0a0a; }
+#fixedmenu { position: fixed; z-index: 101; margin: 0em; width: 100%; top: 0px; left: 0px; right: auto; bottom: auto; overflow-y: visible; height: 10em; background-color: $primaryBackgroundColor; }
 #primary {  }
-#content { background-color: #0a0a0a; z-index: 100; position: relative; }
+#content { background-color: $primaryBackgroundColor; z-index: 100; position: relative; }
 
 /* Mobile */
 @media only screen and (max-width: 767px) {

@@ -53,7 +53,7 @@ template{display:none}
 [hidden]{display:none}
 html{-webkit-box-sizing:border-box;box-sizing:border-box}
 *,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit}
-body{background:#000}
+body{background:#1f1f1f}
 hr{background-color:#ccc;border:0;height:1px;margin-bottom:1.5em}
 ul,ol{margin:0 0 1.5em 3em}
 ul{list-style:disc}
@@ -90,7 +90,7 @@ a:hover,a:active{outline:0}
 .social-navigation li{float:left;position:relative;padding-left:2px;padding-right:2px}
 .comment-navigation .nav-previous,.posts-navigation .nav-previous,.post-navigation .nav-previous{float:left;width:50%}
 .comment-navigation .nav-next,.posts-navigation .nav-next,.post-navigation .nav-next{float:right;text-align:right;width:50%}
-.current-menu-item a{color:#f5f3f1}
+.current-menu-item a{color:#e5e5e5}
 .screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute !important;width:1px;word-wrap:normal !important}
 .screen-reader-text:focus{background-color:#f1f1f1;border-radius:3px;-webkit-box-shadow:0 0 2px 2px rgba(0,0,0,0.6);box-shadow:0 0 2px 2px rgba(0,0,0,0.6);clip:auto !important;-webkit-clip-path:none;clip-path:none;color:#21759b;display:block;font-size:14px;font-size:.875rem;font-weight:bold;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
 #content[tabindex="-1"]:focus{outline:0}
@@ -128,7 +128,7 @@ embed,iframe,object{max-width:100%}
 .gallery-columns-8 .gallery-item{max-width:12.5%}
 .gallery-columns-9 .gallery-item{max-width:11.11%}
 .gallery-caption{display:block}
-html{font-family:Lato,sans-serif;color:#f5f3f1;font-size:100%;-webkit-font-smoothing:antialiased}
+html{font-family:Lato,sans-serif;color:#e5e5e5;font-size:100%;-webkit-font-smoothing:antialiased}
 p{line-height:1.5rem;margin-top:1.5rem;margin-bottom:0}
 ul,ol{margin-top:1.5rem;margin-bottom:1.5rem}
 ul li,ol li{line-height:1.5rem}
@@ -147,8 +147,8 @@ code{vertical-align:bottom}
 .lead{font-size:1.414rem}
 .hug{margin-top:0}
 .site-branding{min-width:2em}
-#fixedmenu{position:fixed;z-index:101;margin:0;width:100%;top:0;left:0;right:auto;bottom:auto;overflow-y:visible;height:10em;background-color:#0a0a0a}
-#content{background-color:#0a0a0a;z-index:100;position:relative}
+#fixedmenu{position:fixed;z-index:101;margin:0;width:100%;top:0;left:0;right:auto;bottom:auto;overflow-y:visible;height:10em;background-color:#1f1f1f}
+#content{background-color:#1f1f1f;z-index:100;position:relative}
 .promo-video{width:100%;height:auto;overflow:hidden;margin-top:-50px;margin-bottom:-100px;z-index:-1;position:relative}
 /*! # Semantic UI 2.4.1 - Container http://github.com/semantic-org/semantic-ui/ Released under the MIT license http://opensource.org/licenses/MIT */.ui.container{display:block;max-width:100% !important}
 .ui.text.container{font-family:'Lato','Helvetica Neue',Arial,Helvetica,sans-serif;max-width:700px !important;line-height:1.5}

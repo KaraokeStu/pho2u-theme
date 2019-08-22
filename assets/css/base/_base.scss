@@ -401,7 +401,7 @@ html {
 }
 
 body {
-	background: #000;
+	background: $primaryBackgroundColor;
 	/* Fallback for when there is no custom background color defined. */
 }
 
@@ -666,7 +666,7 @@ a:hover, a:active {
 	width: 50%;
 }
 
-.current-menu-item a { color: #f5f3f1; }
+.current-menu-item a { color: $secondaryForeColor; }
 
 /*--------------------------------------------------------------
 # Accessibility
