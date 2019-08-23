@@ -20,9 +20,23 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			var canvas = document.getElementById('featured_video_cropped'),
+			ctx = canvas.getContext('2d');
+			function loop(){
+				var video = document.getElementById('featured_video');
+				ctx.drawImage(video, 0,80, 640, 360, 0, 0, 640, 360);
+				setTimeout(loop, 1000 / 30);
+			}
+    
+			loop();
+			}
+		);
+	</script>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> onload="javascript:onLoadEvent()">
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pho2u' ); ?></a>
 	<div id="fixedmenu" class="custom-background">
@@ -73,18 +87,25 @@
 			</div><!-- .twelve wide column -->
 		</header><!-- #masthead -->
 	</div>
-	<div id="featured" class="site-content ui main container">
-	<?php if ( get_header_image() ) : ?>
-		<div id="site-header ui container">
+	<div id="featured">
+		<div class="ui container">
+		<?php if ( get_header_image() ) : ?>
 			<img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="ui fluid image">
-		</div>
-	<?php else: ?>
-		<div id="site-header ui container">
-			<video loop muted autoplay poster="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u.png" class="promo-video">
+			<div id="featured_text">
+				<h2><?php the_title(); ?></h2>
+			</div>
+			</div>
+		<?php else: ?>
+			<canvas id="featured_video_cropped" width="640" height="260"></canvas>
+			<video id="featured_video" loop muted autoplay preload="auto" poster="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u.png" height="360" width="640">
 				<source src="<?php echo get_template_directory_uri(); ?>/assets/video/pho2u.webm" type="video/webm">
 				<source src="<?php echo get_template_directory_uri(); ?>/assets/video/pho2u.mp4" type="video/mp4">
+				<img src=="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u.png"/>
 			</video>
+			<div id="featured_text">
+				<h2 class="title"><?php the_title(); ?></h2>
+			</div>
+		<?php endif; ?>
 		</div>
-	<?php endif; ?>
 	</div>
 	<div id="content" class="site-content ui main container">

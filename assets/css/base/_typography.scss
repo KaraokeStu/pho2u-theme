@@ -103,3 +103,5 @@ code {
 .hug {
     margin-top: 0;
 }
+
+.featured-text h2 { display: inline-block; font-family: Lato,sans-serif; font-size: 2 * $scale * 1rem; line-height: 2 * $leading; margin-top: 2 * $leading; }
