@@ -26,7 +26,7 @@
 			ctx = canvas.getContext('2d');
 			function loop(){
 				var video = document.getElementById('featured_video');
-				ctx.drawImage(video, 0,80, 640, 360, 0, 0, 640, 360);
+				ctx.drawImage(video, 0,50, 640, 360, 0, 0, 640, 360);
 				setTimeout(loop, 1000 / 30);
 			}
     
@@ -92,7 +92,7 @@
 		<?php if ( get_header_image() ) : ?>
 			<img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="ui fluid image">
 			<div id="featured_text">
-				<h2><?php the_title(); ?></h2>
+				<?php the_title(); ?>
 			</div>
 			</div>
 		<?php else: ?>

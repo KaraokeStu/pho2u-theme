@@ -151,6 +151,7 @@ code{vertical-align:bottom}
 #fixedmenu{position:fixed;z-index:101;margin:0;width:100%;top:0;left:0;right:auto;bottom:auto;overflow-y:visible;height:10em;background-color:#1f1f1f}
 #content{background-color:#1f1f1f;z-index:100;position:relative}
 #page{padding-top:10em}
+#featured{position:relative}
 #featured_video_cropped{position:relative;top:0;bottom:0;left:0;right:0;width:100%;height:100%;z-index:-1}
 #featured_video{position:absolute;z-index:-2}
 #featured_text{margin:0;position:absolute;top:50%;left:50%;margin-right:-50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);margin-top:-5em}
