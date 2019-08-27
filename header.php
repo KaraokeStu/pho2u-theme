@@ -20,20 +20,6 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
-	<script type="text/javascript">
-		document.addEventListener("DOMContentLoaded", function(event) { 
-			var canvas = document.getElementById('featured_video_cropped'),
-			ctx = canvas.getContext('2d');
-			function loop(){
-				var video = document.getElementById('featured_video');
-				ctx.drawImage(video, 0,50, 640, 360, 0, 0, 640, 360);
-				setTimeout(loop, 1000 / 30);
-			}
-    
-			loop();
-			}
-		);
-	</script>
 </head>
 
 <body <?php body_class(); ?> onload="javascript:onLoadEvent()">
@@ -96,10 +82,10 @@
 			</div>
 			</div>
 		<?php else: ?>
-			<canvas id="featured_video_cropped" width="640" height="260"></canvas>
-			<video id="featured_video" loop muted autoplay preload="auto" poster="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u.png" height="360" width="640">
-				<source src="<?php echo get_template_directory_uri(); ?>/assets/video/pho2u.webm" type="video/webm">
+			<video id="featured_video" loop muted autoplay preload="auto" poster="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u.jpg" height="270" width="640">
 				<source src="<?php echo get_template_directory_uri(); ?>/assets/video/pho2u.mp4" type="video/mp4">
+				<source src="<?php echo get_template_directory_uri(); ?>/assets/video/pho2u.webm" type="video/webm">
+				<source src="<?php echo get_template_directory_uri(); ?>/assets/video/pho2u.ogv" type="video/ogg">
 				<img src=="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u.png"/>
 			</video>
 			<div id="featured_text">
