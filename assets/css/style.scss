@@ -5,10 +5,11 @@
 @import './base/custom';
 
 // layouts
-@import './layouts/container';
 @import './layouts/grid';
-@import './layouts/image';
 @import './layouts/segment';
+@import './layouts/container';
+@import './layouts/image';
+
 @import './layouts/placeholder';
 @import './layouts/item';
 

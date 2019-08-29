@@ -1,4 +1,4 @@
-/*!
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,400i,700,900&display=swap");/*!
 Theme Name: Pho2u
 Theme URI: https://fdsoftware.co.uk/
 Author: Stuart Foulds-Duncan @ FD Software
@@ -76,18 +76,7 @@ a:visited{color:#6cf}
 a:hover,a:focus,a:active{color:#f5f3f1}
 a:focus{outline:thin dotted}
 a:hover,a:active{outline:0}
-.main-navigation{clear:both;display:block;float:right}
-.main-navigation ul{list-style:none;margin:0;padding-left:0;bottom:0}
-.main-navigation ul ul{-webkit-box-shadow:0 3px 3px rgba(0,0,0,0.2);box-shadow:0 3px 3px rgba(0,0,0,0.2);float:left;position:absolute;top:100%;left:-999em;z-index:99999}
-.main-navigation ul ul ul{left:-999em;top:0}
-.main-navigation ul ul li:hover>ul,.main-navigation ul ul li.focus>ul{left:100%}
-.main-navigation ul ul a{width:200px}
-.main-navigation ul li:hover>ul,.main-navigation ul li.focus>ul{left:auto}
-.main-navigation li{float:left;position:relative;padding-left:12px;padding-right:12px}
-.main-navigation a{display:block;text-decoration:none}
-.social-navigation{clear:both;display:block;float:right}
-.social-navigation ul{list-style:none;margin:0;padding-left:0;bottom:0}
-.social-navigation li{float:left;position:relative;padding-left:2px;padding-right:2px}
+#site-navigation a{display:block;text-decoration:none}
 .comment-navigation .nav-previous,.posts-navigation .nav-previous,.post-navigation .nav-previous{float:left;width:50%}
 .comment-navigation .nav-next,.posts-navigation .nav-next,.post-navigation .nav-next{float:right;text-align:right;width:50%}
 .current-menu-item a{color:#e5e5e5}
@@ -128,13 +117,13 @@ embed,iframe,object{max-width:100%}
 .gallery-columns-8 .gallery-item{max-width:12.5%}
 .gallery-columns-9 .gallery-item{max-width:11.11%}
 .gallery-caption{display:block}
-html{font-family:Lato,sans-serif;color:#e5e5e5;font-size:100%;-webkit-font-smoothing:antialiased}
+html{font-family:Lato,sans-serif;color:#e5e5e5;font-size:87.5%;-webkit-font-smoothing:antialiased}
 p{line-height:1.5rem;margin-top:1.5rem;margin-bottom:0}
 ul,ol{margin-top:1.5rem;margin-bottom:1.5rem}
 ul li,ol li{line-height:1.5rem}
 ul ul,ul ol,ol ul,ol ol{margin-top:0;margin-bottom:0}
 blockquote{line-height:1.5rem;margin-top:1.5rem;margin-bottom:1.5rem}
-h1,h2,h3,h4,h5,h6{font-family:sans-serif;margin-top:1.5rem;margin-bottom:0;line-height:1.5rem}
+h1,h2,h3,h4,h5,h6{font-family:Lato,sans-serif;margin-top:1.5rem;margin-bottom:0;line-height:1.5rem}
 h1{font-size:4.242rem;line-height:4.5rem;margin-top:3rem}
 h2{font-size:2.828rem;line-height:3rem;margin-top:3rem}
 h3{font-size:1.414rem}
@@ -142,27 +131,19 @@ h4{font-size:.707rem}
 h5{font-size:.4713333333rem}
 h6{font-size:.3535rem}
 table{margin-top:1.5rem;border-spacing:0;border-collapse:collapse}
-td,th{padding:0;line-height:24px}
+td,th{padding:0;line-height:21px}
 code{vertical-align:bottom}
 .lead{font-size:1.414rem}
 .hug{margin-top:0}
-.featured-text h2{display:inline-block;font-family:Lato,sans-serif;font-size:2.828rem;line-height:3rem;margin-top:3rem}
-.site-branding{min-width:2em}
-#fixedmenu{position:fixed;z-index:101;margin:0;width:100%;top:0;left:0;right:auto;bottom:auto;overflow-y:visible;height:10em;background-color:#1f1f1f}
-#page{padding-top:10em}
+#fixedmenu{position:fixed;z-index:101;margin:0;width:100%;top:0;left:0;right:auto;bottom:auto;overflow-y:visible;height:10rem;background-color:#1f1f1f}
+#page{padding-top:10rem}
 #content{background-color:#1f1f1f;z-index:100;position:relative}
 #featured{position:relative}
 #featured_video{z-index:-1;width:100%;height:100%}
-#featured_text{margin:0;position:absolute;top:50%;left:50%;margin-right:-50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
-#featured_text h2{margin:0}
-/*! # Semantic UI 2.4.1 - Container http://github.com/semantic-org/semantic-ui/ Released under the MIT license http://opensource.org/licenses/MIT */.ui.container{display:block;max-width:100% !important}
-.ui.text.container{font-family:'Lato','Helvetica Neue',Arial,Helvetica,sans-serif;max-width:700px !important;line-height:1.5}
-.ui.text.container{font-size:1.14285714rem}
-.ui.fluid.container{width:100%}
-.ui[class*="left aligned"].container{text-align:left}
-.ui[class*="center aligned"].container{text-align:center}
-.ui[class*="right aligned"].container{text-align:right}
-.ui.justified.container{text-align:justify;-webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto}
+#featured_text{margin:0;position:absolute;top:50%;left:50%;margin-right:-50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);font-family:Lato,sans-serif;text-shadow:0 0 5px rgba(0,0,0,0.8);text-align:center;color:white}
+#featured_text .title{font-size:5.656rem;line-height:6rem;font-weight:300;text-transform:uppercase}
+#featured_text .subtitle{font-size:1.7675rem;line-height:1.875rem;margin:1.6rem;font-weight:300}
+#featured_text .intro{font-size:1.2726rem;line-height:1.35rem;font-weight:300}
 /*! # Semantic UI 2.4.1 - Grid http://github.com/semantic-org/semantic-ui/ Released under the MIT license http://opensource.org/licenses/MIT */.ui.grid{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;padding:0}
 .ui.grid{margin-top:-1rem;margin-bottom:-1rem;margin-left:-1rem;margin-right:-1rem}
 .ui.relaxed.grid{margin-left:-1.5rem;margin-right:-1.5rem}
@@ -294,40 +275,6 @@ code{vertical-align:bottom}
 .ui.grid>.black.row,.ui.grid>.black.column,.ui.grid>.row>.black.column{background-color:#1b1c1d !important;color:#fff}
 .ui[class*="equal width"].grid>.column:not(.row),.ui[class*="equal width"].grid>.row>.column,.ui.grid>[class*="equal width"].row>.column{display:inline-block;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}
 .ui[class*="equal width"].grid>.wide.column,.ui[class*="equal width"].grid>.row>.wide.column,.ui.grid>[class*="equal width"].row>.wide.column{-webkit-box-flex:0;-ms-flex-positive:0;flex-grow:0}
-/*! # Semantic UI 2.4.1 - Image http://github.com/semantic-org/semantic-ui/ Released under the MIT license http://opensource.org/licenses/MIT */.ui.image{position:relative;display:inline-block;vertical-align:middle;max-width:100%;background-color:transparent}
-img.ui.image{display:block}
-.ui.image svg,.ui.image img{display:block;max-width:100%;height:auto}
-.ui.hidden.images,.ui.hidden.image{display:none}
-.ui.hidden.transition.images,.ui.hidden.transition.image{display:block;visibility:hidden}
-.ui.images>.hidden.transition{display:inline-block;visibility:hidden}
-.ui.disabled.images,.ui.disabled.image{cursor:default;opacity:.45}
-.ui.inline.image,.ui.inline.image svg,.ui.inline.image img{display:inline-block}
-.ui.top.aligned.images .image,.ui.top.aligned.image,.ui.top.aligned.image svg,.ui.top.aligned.image img{display:inline-block;vertical-align:top}
-.ui.middle.aligned.images .image,.ui.middle.aligned.image,.ui.middle.aligned.image svg,.ui.middle.aligned.image img{display:inline-block;vertical-align:middle}
-.ui.bottom.aligned.images .image,.ui.bottom.aligned.image,.ui.bottom.aligned.image svg,.ui.bottom.aligned.image img{display:inline-block;vertical-align:bottom}
-.ui.rounded.images .image,.ui.rounded.image,.ui.rounded.images .image>*,.ui.rounded.image>*{border-radius:.3125em}
-.ui.bordered.images .image,.ui.bordered.images img,.ui.bordered.images svg,.ui.bordered.image img,.ui.bordered.image svg,img.ui.bordered.image{border:1px solid rgba(0,0,0,0.1)}
-.ui.circular.images,.ui.circular.image{overflow:hidden}
-.ui.circular.images .image,.ui.circular.image,.ui.circular.images .image>*,.ui.circular.image>*{border-radius:500rem}
-.ui.fluid.images,.ui.fluid.image,.ui.fluid.images img,.ui.fluid.images svg,.ui.fluid.image svg,.ui.fluid.image img{display:block;width:100%;height:auto}
-.ui.avatar.images .image,.ui.avatar.images img,.ui.avatar.images svg,.ui.avatar.image img,.ui.avatar.image svg,.ui.avatar.image{margin-right:.25em;display:inline-block;width:2em;height:2em;border-radius:500rem}
-.ui.spaced.image{display:inline-block !important;margin-left:.5em;margin-right:.5em}
-.ui[class*="left spaced"].image{margin-left:.5em;margin-right:0}
-.ui[class*="right spaced"].image{margin-left:0;margin-right:.5em}
-.ui.floated.image,.ui.floated.images{float:left;margin-right:1em;margin-bottom:1em}
-.ui.right.floated.images,.ui.right.floated.image{float:right;margin-right:0;margin-bottom:1em;margin-left:1em}
-.ui.floated.images:last-child,.ui.floated.image:last-child{margin-bottom:0}
-.ui.centered.images,.ui.centered.image{margin-left:auto;margin-right:auto}
-.ui.mini.images .image,.ui.mini.images img,.ui.mini.images svg,.ui.mini.image{width:35px;height:auto;font-size:.78571429rem}
-.ui.tiny.images .image,.ui.tiny.images img,.ui.tiny.images svg,.ui.tiny.image{width:80px;height:auto;font-size:.85714286rem}
-.ui.small.images .image,.ui.small.images img,.ui.small.images svg,.ui.small.image{width:150px;height:auto;font-size:.92857143rem}
-.ui.medium.images .image,.ui.medium.images img,.ui.medium.images svg,.ui.medium.image{width:300px;height:auto;font-size:1rem}
-.ui.large.images .image,.ui.large.images img,.ui.large.images svg,.ui.large.image{width:450px;height:auto;font-size:1.14285714rem}
-.ui.big.images .image,.ui.big.images img,.ui.big.images svg,.ui.big.image{width:600px;height:auto;font-size:1.28571429rem}
-.ui.huge.images .image,.ui.huge.images img,.ui.huge.images svg,.ui.huge.image{width:800px;height:auto;font-size:1.42857143rem}
-.ui.massive.images .image,.ui.massive.images img,.ui.massive.images svg,.ui.massive.image{width:960px;height:auto;font-size:1.71428571rem}
-.ui.images{font-size:0;margin:0 -0.25rem 0}
-.ui.images .image,.ui.images>img,.ui.images>svg{display:inline-block;margin:0 .25rem .5rem}
 /*! # Semantic UI 2.4.1 - Segment http://github.com/semantic-org/semantic-ui/ Released under the MIT license http://opensource.org/licenses/MIT */.ui.segment{position:relative;background:#fff;-webkit-box-shadow:0 1px 2px 0 rgba(34,36,38,0.15);box-shadow:0 1px 2px 0 rgba(34,36,38,0.15);margin:1rem 0;padding:1em 1em;border-radius:.28571429rem;border:1px solid rgba(34,36,38,0.15)}
 .ui.segment:first-child{margin-top:0}
 .ui.segment:last-child{margin-bottom:0}
@@ -447,6 +394,48 @@ img.ui.image{display:block}
 .ui.big.segments .segment,.ui.big.segment{font-size:1.28571429rem}
 .ui.huge.segments .segment,.ui.huge.segment{font-size:1.42857143rem}
 .ui.massive.segments .segment,.ui.massive.segment{font-size:1.71428571rem}
+/*! # Semantic UI 2.4.1 - Container http://github.com/semantic-org/semantic-ui/ Released under the MIT license http://opensource.org/licenses/MIT */.ui.container{display:block;max-width:100% !important}
+.ui.text.container{font-family:'Lato','Helvetica Neue',Arial,Helvetica,sans-serif;max-width:700px !important;line-height:1.5}
+.ui.text.container{font-size:1.14285714rem}
+.ui.fluid.container{width:100%}
+.ui[class*="left aligned"].container{text-align:left}
+.ui[class*="center aligned"].container{text-align:center}
+.ui[class*="right aligned"].container{text-align:right}
+.ui.justified.container{text-align:justify;-webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto}
+/*! # Semantic UI 2.4.1 - Image http://github.com/semantic-org/semantic-ui/ Released under the MIT license http://opensource.org/licenses/MIT */.ui.image{position:relative;display:inline-block;vertical-align:middle;max-width:100%;background-color:transparent}
+img.ui.image{display:block}
+.ui.image svg,.ui.image img{display:block;max-width:100%;height:auto}
+.ui.hidden.images,.ui.hidden.image{display:none}
+.ui.hidden.transition.images,.ui.hidden.transition.image{display:block;visibility:hidden}
+.ui.images>.hidden.transition{display:inline-block;visibility:hidden}
+.ui.disabled.images,.ui.disabled.image{cursor:default;opacity:.45}
+.ui.inline.image,.ui.inline.image svg,.ui.inline.image img{display:inline-block}
+.ui.top.aligned.images .image,.ui.top.aligned.image,.ui.top.aligned.image svg,.ui.top.aligned.image img{display:inline-block;vertical-align:top}
+.ui.middle.aligned.images .image,.ui.middle.aligned.image,.ui.middle.aligned.image svg,.ui.middle.aligned.image img{display:inline-block;vertical-align:middle}
+.ui.bottom.aligned.images .image,.ui.bottom.aligned.image,.ui.bottom.aligned.image svg,.ui.bottom.aligned.image img{display:inline-block;vertical-align:bottom}
+.ui.rounded.images .image,.ui.rounded.image,.ui.rounded.images .image>*,.ui.rounded.image>*{border-radius:.3125em}
+.ui.bordered.images .image,.ui.bordered.images img,.ui.bordered.images svg,.ui.bordered.image img,.ui.bordered.image svg,img.ui.bordered.image{border:1px solid rgba(0,0,0,0.1)}
+.ui.circular.images,.ui.circular.image{overflow:hidden}
+.ui.circular.images .image,.ui.circular.image,.ui.circular.images .image>*,.ui.circular.image>*{border-radius:500rem}
+.ui.fluid.images,.ui.fluid.image,.ui.fluid.images img,.ui.fluid.images svg,.ui.fluid.image svg,.ui.fluid.image img{display:block;width:100%;height:auto}
+.ui.avatar.images .image,.ui.avatar.images img,.ui.avatar.images svg,.ui.avatar.image img,.ui.avatar.image svg,.ui.avatar.image{margin-right:.25em;display:inline-block;width:2em;height:2em;border-radius:500rem}
+.ui.spaced.image{display:inline-block !important;margin-left:.5em;margin-right:.5em}
+.ui[class*="left spaced"].image{margin-left:.5em;margin-right:0}
+.ui[class*="right spaced"].image{margin-left:0;margin-right:.5em}
+.ui.floated.image,.ui.floated.images{float:left;margin-right:1em;margin-bottom:1em}
+.ui.right.floated.images,.ui.right.floated.image{float:right;margin-right:0;margin-bottom:1em;margin-left:1em}
+.ui.floated.images:last-child,.ui.floated.image:last-child{margin-bottom:0}
+.ui.centered.images,.ui.centered.image{margin-left:auto;margin-right:auto}
+.ui.mini.images .image,.ui.mini.images img,.ui.mini.images svg,.ui.mini.image{width:35px;height:auto;font-size:.78571429rem}
+.ui.tiny.images .image,.ui.tiny.images img,.ui.tiny.images svg,.ui.tiny.image{width:80px;height:auto;font-size:.85714286rem}
+.ui.small.images .image,.ui.small.images img,.ui.small.images svg,.ui.small.image{width:150px;height:auto;font-size:.92857143rem}
+.ui.medium.images .image,.ui.medium.images img,.ui.medium.images svg,.ui.medium.image{width:300px;height:auto;font-size:1rem}
+.ui.large.images .image,.ui.large.images img,.ui.large.images svg,.ui.large.image{width:450px;height:auto;font-size:1.14285714rem}
+.ui.big.images .image,.ui.big.images img,.ui.big.images svg,.ui.big.image{width:600px;height:auto;font-size:1.28571429rem}
+.ui.huge.images .image,.ui.huge.images img,.ui.huge.images svg,.ui.huge.image{width:800px;height:auto;font-size:1.42857143rem}
+.ui.massive.images .image,.ui.massive.images img,.ui.massive.images svg,.ui.massive.image{width:960px;height:auto;font-size:1.71428571rem}
+.ui.images{font-size:0;margin:0 -0.25rem 0}
+.ui.images .image,.ui.images>img,.ui.images>svg{display:inline-block;margin:0 .25rem .5rem}
 /*! # Semantic UI 2.4.1 - Loader http://github.com/semantic-org/semantic-ui/ Released under the MIT license http://opensource.org/licenses/MIT */.ui.placeholder{position:static;overflow:hidden;-webkit-animation:placeholderShimmer 2s linear;animation:placeholderShimmer 2s linear;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;background-color:#fff;background-image:-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,0.08)),color-stop(15%,rgba(0,0,0,0.15)),color-stop(30%,rgba(0,0,0,0.08)));background-image:linear-gradient(to right,rgba(0,0,0,0.08) 0,rgba(0,0,0,0.15) 15%,rgba(0,0,0,0.08) 30%);background-size:1200px 100%;max-width:30rem}
 .ui.placeholder+.ui.placeholder{margin-top:2rem}
 .ui.placeholder+.ui.placeholder{-webkit-animation-delay:.15s;animation-delay:.15s}
@@ -702,12 +691,16 @@ img.ui.image{display:block}
 .ui.grid>.row>[class*="fourteen wide mobile"].column,.ui.grid>.column.row>[class*="fourteen wide mobile"].column,.ui.grid>[class*="fourteen wide mobile"].column,.ui.column.grid>[class*="fourteen wide mobile"].column{width:87.5% !important}
 .ui.grid>.row>[class*="fifteen wide mobile"].column,.ui.grid>.column.row>[class*="fifteen wide mobile"].column,.ui.grid>[class*="fifteen wide mobile"].column,.ui.column.grid>[class*="fifteen wide mobile"].column{width:93.75% !important}
 .ui.grid>.row>[class*="sixteen wide mobile"].column,.ui.grid>.column.row>[class*="sixteen wide mobile"].column,.ui.grid>[class*="sixteen wide mobile"].column,.ui.column.grid>[class*="sixteen wide mobile"].column{width:100% !important}
-}@media only screen and (min-width:768px) and (max-width:991px){#fixedmenu{height:7em}
-#page{padding-top:7em}
-.ui.container{width:723px;margin-left:auto !important;margin-right:auto !important}
-.ui.grid.container{width:calc(723px + 2rem) !important}
-.ui.relaxed.grid.container{width:calc(723px + 3rem) !important}
-.ui.very.relaxed.grid.container{width:calc(723px + 5rem) !important}
+}@media only screen and (min-width:321px) and (max-width:767px){#fixedmenu{height:4rem}
+#page{padding-top:4rem}
+#featured_text{margin-top:-1rem}
+#featured_text .title{font-size:2.828rem;line-height:3rem}
+#featured_text .subtitle{font-size:.8484rem;line-height:.9rem;margin-top:1rem}
+#featured_text .intro{display:none}
+}@media only screen and (min-width:768px) and (max-width:991px){#social-navigation{font-size:80%}
+#site-navigation{font-size:80%}
+#featured_text{margin-top:-1rem}
+#featured_text .intro{font-size:1.0605rem;line-height:1.125rem;margin-top:1rem}
 .ui.page.grid{width:auto;margin-left:0;margin-right:0;padding-left:2em;padding-right:2em}
 .ui.grid>.row>[class*="one wide tablet"].column,.ui.grid>.column.row>[class*="one wide tablet"].column,.ui.grid>[class*="one wide tablet"].column,.ui.column.grid>[class*="one wide tablet"].column{width:6.25% !important}
 .ui.grid>.row>[class*="two wide tablet"].column,.ui.grid>.column.row>[class*="two wide tablet"].column,.ui.grid>[class*="two wide tablet"].column,.ui.column.grid>[class*="two wide tablet"].column{width:12.5% !important}
@@ -755,20 +748,24 @@ img.ui.image{display:block}
 .ui[class*="computer only"].grid.grid.grid:not(.tablet),.ui.grid.grid.grid>[class*="computer only"].row:not(.tablet),.ui.grid.grid.grid>[class*="computer only"].column:not(.tablet),.ui.grid.grid.grid>.row>[class*="computer only"].column:not(.tablet){display:none !important}
 .ui[class*="large screen only"].grid.grid.grid:not(.mobile),.ui.grid.grid.grid>[class*="large screen only"].row:not(.mobile),.ui.grid.grid.grid>[class*="large screen only"].column:not(.mobile),.ui.grid.grid.grid>.row>[class*="large screen only"].column:not(.mobile){display:none !important}
 .ui[class*="widescreen only"].grid.grid.grid:not(.mobile),.ui.grid.grid.grid>[class*="widescreen only"].row:not(.mobile),.ui.grid.grid.grid>[class*="widescreen only"].column:not(.mobile),.ui.grid.grid.grid>.row>[class*="widescreen only"].column:not(.mobile){display:none !important}
+.ui.container{width:723px;margin-left:auto !important;margin-right:auto !important}
+.ui.grid.container{width:calc(723px + 2rem) !important}
+.ui.relaxed.grid.container{width:calc(723px + 3rem) !important}
+.ui.very.relaxed.grid.container{width:calc(723px + 5rem) !important}
 .ui.items>.item{margin:1em 0}
 .ui.items>.item>.image:not(.ui){width:150px}
 .ui.items>.item>.image+.content{display:block;padding:0 0 0 1em}
-}@media only screen and (min-width:992px) and (max-width:1199px){#fixedmenu{height:9em}
-#page{padding-top:9em}
-.ui.container{width:933px;margin-left:auto !important;margin-right:auto !important}
-.ui.grid.container{width:calc(933px + 2rem) !important}
-.ui.relaxed.grid.container{width:calc(933px + 3rem) !important}
-.ui.very.relaxed.grid.container{width:calc(933px + 5rem) !important}
+}@media only screen and (min-width:992px) and (max-width:1199px){#site-navigation{font-size:85%}
+#social-navigation{font-size:85%}
 .ui.page.grid{width:auto;margin-left:0;margin-right:0;padding-left:3%;padding-right:3%}
 .ui[class*="mobile only"].grid.grid.grid:not(.computer),.ui.grid.grid.grid>[class*="mobile only"].row:not(.computer),.ui.grid.grid.grid>[class*="mobile only"].column:not(.computer),.ui.grid.grid.grid>.row>[class*="mobile only"].column:not(.computer){display:none !important}
 .ui[class*="tablet only"].grid.grid.grid:not(.computer),.ui.grid.grid.grid>[class*="tablet only"].row:not(.computer),.ui.grid.grid.grid>[class*="tablet only"].column:not(.computer),.ui.grid.grid.grid>.row>[class*="tablet only"].column:not(.computer){display:none !important}
 .ui[class*="large screen only"].grid.grid.grid:not(.mobile),.ui.grid.grid.grid>[class*="large screen only"].row:not(.mobile),.ui.grid.grid.grid>[class*="large screen only"].column:not(.mobile),.ui.grid.grid.grid>.row>[class*="large screen only"].column:not(.mobile){display:none !important}
 .ui[class*="widescreen only"].grid.grid.grid:not(.mobile),.ui.grid.grid.grid>[class*="widescreen only"].row:not(.mobile),.ui.grid.grid.grid>[class*="widescreen only"].column:not(.mobile),.ui.grid.grid.grid>.row>[class*="widescreen only"].column:not(.mobile){display:none !important}
+.ui.container{width:933px;margin-left:auto !important;margin-right:auto !important}
+.ui.grid.container{width:calc(933px + 2rem) !important}
+.ui.relaxed.grid.container{width:calc(933px + 3rem) !important}
+.ui.very.relaxed.grid.container{width:calc(933px + 5rem) !important}
 }@media only screen and (min-width:992px){.ui.grid>.row>[class*="one wide computer"].column,.ui.grid>.column.row>[class*="one wide computer"].column,.ui.grid>[class*="one wide computer"].column,.ui.column.grid>[class*="one wide computer"].column{width:6.25% !important}
 .ui.grid>.row>[class*="two wide computer"].column,.ui.grid>.column.row>[class*="two wide computer"].column,.ui.grid>[class*="two wide computer"].column,.ui.column.grid>[class*="two wide computer"].column{width:12.5% !important}
 .ui.grid>.row>[class*="three wide computer"].column,.ui.grid>.column.row>[class*="three wide computer"].column,.ui.grid>[class*="three wide computer"].column,.ui.column.grid>[class*="three wide computer"].column{width:18.75% !important}
@@ -793,10 +790,6 @@ img.ui.image{display:block}
 .ui.grid[class*="vertically divided"][class*="computer vertically reversed"]>.row:last-child:before{-webkit-box-shadow:none;box-shadow:none}
 .ui[class*="computer reversed"].celled.grid>.row>.column:first-child{-webkit-box-shadow:-1px 0 0 0 #d4d4d5;box-shadow:-1px 0 0 0 #d4d4d5}
 .ui[class*="computer reversed"].celled.grid>.row>.column:last-child{-webkit-box-shadow:none;box-shadow:none}
-}@media only screen and (min-width:1200px){.ui.container{width:1127px;margin-left:auto !important;margin-right:auto !important}
-.ui.grid.container{width:calc(1127px + 2rem) !important}
-.ui.relaxed.grid.container{width:calc(1127px + 3rem) !important}
-.ui.very.relaxed.grid.container{width:calc(1127px + 5rem) !important}
 }@media only screen and (min-width:1200px) and (max-width:1919px){.ui.page.grid{width:auto;margin-left:0;margin-right:0;padding-left:15%;padding-right:15%}
 .ui.grid>.row>[class*="one wide large screen"].column,.ui.grid>.column.row>[class*="one wide large screen"].column,.ui.grid>[class*="one wide large screen"].column,.ui.column.grid>[class*="one wide large screen"].column{width:6.25% !important}
 .ui.grid>.row>[class*="two wide large screen"].column,.ui.grid>.column.row>[class*="two wide large screen"].column,.ui.grid>[class*="two wide large screen"].column,.ui.column.grid>[class*="two wide large screen"].column{width:12.5% !important}
@@ -817,6 +810,10 @@ img.ui.image{display:block}
 .ui[class*="mobile only"].grid.grid.grid:not(.computer),.ui.grid.grid.grid>[class*="mobile only"].row:not(.computer),.ui.grid.grid.grid>[class*="mobile only"].column:not(.computer),.ui.grid.grid.grid>.row>[class*="mobile only"].column:not(.computer){display:none !important}
 .ui[class*="tablet only"].grid.grid.grid:not(.computer),.ui.grid.grid.grid>[class*="tablet only"].row:not(.computer),.ui.grid.grid.grid>[class*="tablet only"].column:not(.computer),.ui.grid.grid.grid>.row>[class*="tablet only"].column:not(.computer){display:none !important}
 .ui[class*="widescreen only"].grid.grid.grid:not(.mobile),.ui.grid.grid.grid>[class*="widescreen only"].row:not(.mobile),.ui.grid.grid.grid>[class*="widescreen only"].column:not(.mobile),.ui.grid.grid.grid>.row>[class*="widescreen only"].column:not(.mobile){display:none !important}
+}@media only screen and (min-width:1200px){.ui.container{width:1127px;margin-left:auto !important;margin-right:auto !important}
+.ui.grid.container{width:calc(1127px + 2rem) !important}
+.ui.relaxed.grid.container{width:calc(1127px + 3rem) !important}
+.ui.very.relaxed.grid.container{width:calc(1127px + 5rem) !important}
 }@media only screen and (min-width:1920px){.ui.page.grid{width:auto;margin-left:0;margin-right:0;padding-left:23%;padding-right:23%}
 .ui.grid>.row>[class*="one wide widescreen"].column,.ui.grid>.column.row>[class*="one wide widescreen"].column,.ui.grid>[class*="one wide widescreen"].column,.ui.column.grid>[class*="one wide widescreen"].column{width:6.25% !important}
 .ui.grid>.row>[class*="two wide widescreen"].column,.ui.grid>.column.row>[class*="two wide widescreen"].column,.ui.grid>[class*="two wide widescreen"].column,.ui.column.grid>[class*="two wide widescreen"].column{width:12.5% !important}
@@ -836,13 +833,7 @@ img.ui.image{display:block}
 .ui.grid>.row>[class*="sixteen wide widescreen"].column,.ui.grid>.column.row>[class*="sixteen wide widescreen"].column,.ui.grid>[class*="sixteen wide widescreen"].column,.ui.column.grid>[class*="sixteen wide widescreen"].column{width:100% !important}
 .ui[class*="mobile only"].grid.grid.grid:not(.computer),.ui.grid.grid.grid>[class*="mobile only"].row:not(.computer),.ui.grid.grid.grid>[class*="mobile only"].column:not(.computer),.ui.grid.grid.grid>.row>[class*="mobile only"].column:not(.computer){display:none !important}
 .ui[class*="tablet only"].grid.grid.grid:not(.computer),.ui.grid.grid.grid>[class*="tablet only"].row:not(.computer),.ui.grid.grid.grid>[class*="tablet only"].column:not(.computer),.ui.grid.grid.grid>.row>[class*="tablet only"].column:not(.computer){display:none !important}
-}@media only screen and (max-width:767px){#fixedmenu{height:5em}
-#page{padding-top:5em}
-.ui.container{width:auto !important;margin-left:1em !important;margin-right:1em !important}
-.ui.grid.container{width:auto !important}
-.ui.relaxed.grid.container{width:auto !important}
-.ui.very.relaxed.grid.container{width:auto !important}
-.ui.page.grid{width:auto;padding-left:0;padding-right:0;margin-left:0;margin-right:0}
+}@media only screen and (max-width:767px){.ui.page.grid{width:auto;padding-left:0;padding-right:0;margin-left:0;margin-right:0}
 .ui[class*="mobile reversed"].grid,.ui[class*="mobile reversed"].grid>.row,.ui.grid>[class*="mobile reversed"].row{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
 .ui[class*="mobile vertically reversed"].grid,.ui.stackable[class*="mobile reversed"]{-webkit-box-orient:vertical;-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse}
 .ui[class*="mobile reversed"].divided.grid:not([class*="vertically divided"])>.column:first-child,.ui[class*="mobile reversed"].divided.grid:not([class*="vertically divided"])>.row>.column:first-child{-webkit-box-shadow:-1px 0 0 0 rgba(34,36,38,0.15);box-shadow:-1px 0 0 0 rgba(34,36,38,0.15)}
@@ -882,11 +873,21 @@ img.ui.image{display:block}
 .ui[class*="computer only"].grid.grid.grid:not(.mobile),.ui.grid.grid.grid>[class*="computer only"].row:not(.mobile),.ui.grid.grid.grid>[class*="computer only"].column:not(.mobile),.ui.grid.grid.grid>.row>[class*="computer only"].column:not(.mobile){display:none !important}
 .ui[class*="large screen only"].grid.grid.grid:not(.mobile),.ui.grid.grid.grid>[class*="large screen only"].row:not(.mobile),.ui.grid.grid.grid>[class*="large screen only"].column:not(.mobile),.ui.grid.grid.grid>.row>[class*="large screen only"].column:not(.mobile){display:none !important}
 .ui[class*="widescreen only"].grid.grid.grid:not(.mobile),.ui.grid.grid.grid>[class*="widescreen only"].row:not(.mobile),.ui.grid.grid.grid>[class*="widescreen only"].column:not(.mobile),.ui.grid.grid.grid>.row>[class*="widescreen only"].column:not(.mobile){display:none !important}
+.ui.container{width:auto !important;margin-left:1em !important;margin-right:1em !important}
+.ui.grid.container{width:auto !important}
+.ui.relaxed.grid.container{width:auto !important}
+.ui.very.relaxed.grid.container{width:auto !important}
 .ui.items:not(.unstackable)>.item{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;margin:2em 0}
 .ui.items:not(.unstackable)>.item>.image{display:block;margin-left:auto;margin-right:auto}
 .ui.items:not(.unstackable)>.item>.image,.ui.items:not(.unstackable)>.item>.image>img{max-width:100% !important;width:auto !important;max-height:250px !important}
 .ui.items:not(.unstackable)>.item>.image+.content{display:block;padding:1.5em 0 0}
 .ui.unstackable.items>.item>.image,.ui.unstackable.items>.item>.image>img{width:125px !important}
+}@media only screen and (max-width:320px){#fixedmenu{height:3rem}
+#page{padding-top:3rem}
+#featured_text{margin-top:-1rem}
+#featured_text .title{font-size:2.828rem;line-height:3rem}
+#featured_text .subtitle{font-size:.707rem;line-height:.75rem;margin-top:1rem}
+#featured_text .intro{display:none}
 }@-webkit-keyframes segment-spin{from{-webkit-transform:rotate(0);transform:rotate(0)}
 to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
 }@keyframes segment-spin{from{-webkit-transform:rotate(0);transform:rotate(0)}

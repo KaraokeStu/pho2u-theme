@@ -26,8 +26,9 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pho2u' ); ?></a>
 	<div id="fixedmenu" class="custom-background">
-		<header id="masthead" class="site-header ui container grid">
-			<div class="four wide column padded bottom aligned">
+		<header id="masthead" class="site-header ui container">
+		<div class="ui padded grid">
+			<div class="bottom aligned four wide mobile tablet three wide computer column">
 				<div class="site-branding">
 					<?php
 					the_custom_logo();
@@ -47,51 +48,69 @@
 					<?php endif; ?>
 				</div><!-- .site-branding -->
 			</div><!-- .four wide column -->
-			<div class="twelve wide middle aligned column">
-				<div class="ui grid">
-					<div class="right floated computer sixteen wide computer tablet only column">
-						<nav id="social-navigation" class="social-navigation">
+			<div class="four wide mobile twelve wide tablet thirteen wide computer column">
+				
+					
+						<nav id="social-navigation" class="social-navigation ui padded grid">
+							<div class="computer tablet only row">
 							<?php
 							wp_nav_menu( array(
 								'theme_location' => 'menu-2',
 								'menu_id'        => 'social-media',
+								'container'		 => false,
+								'items_wrap'	 => '%3$s',
+								'walker'		 => new pho2u_walker_right()
 							) );
 							?>
+							</div>
 						</nav>
-					</div>
-					<div class="right floated sixteen wide column">
-						<nav id="site-navigation" class="main-navigation">
+					
+					
+						<nav id="site-navigation" class="main-navigation ui equal width center aligned grid">
+							<div class="computer tablet only row">
 							<?php
 							wp_nav_menu( array(
 								'theme_location' => 'menu-1',
 								'menu_id'        => 'primary-menu',
+								'container'		 => false,
+								'items_wrap'	 => '%3$s',
+								'walker'		 => new pho2u_walker_hidefirst()
 							) );
 							?>
+							</div>
 						</nav><!-- #site-navigation -->
-					</div>
-				</div>
+					
+				
 			</div><!-- .twelve wide column -->
+		</div>
 		</header><!-- #masthead -->
 	</div>
 	<div id="featured">
+		<?php 
+		global $wp_query;
+		$meta = get_post_meta( $post->ID, 'pho2u_fields', true );
+		wp_reset_query();
+		?>
 		<div class="ui container">
-		<?php if ( get_header_image() ) : ?>
-			<img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="ui fluid image">
+			<?php if ( get_header_image() ) : ?>
+				<img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="ui fluid image">
+			<?php else: ?>
+				<video id="featured_video" loop muted autoplay preload="auto" poster="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u.jpg" height="270" width="640">
+					<source src="<?php echo get_template_directory_uri(); ?>/assets/video/pho2u.mp4" type="video/mp4">
+					<source src="<?php echo get_template_directory_uri(); ?>/assets/video/pho2u.webm" type="video/webm">
+					<source src="<?php echo get_template_directory_uri(); ?>/assets/video/pho2u.ogv" type="video/ogg">
+					<img src=="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u.png"/>
+				</video>
+			<?php endif; ?>
 			<div id="featured_text">
-				<?php the_title(); ?>
+				<h2 class="title ui container"><?php the_title(); ?></h2>
+				<?php  if (is_array($meta) && isset($meta['page_subtitle'])) : ?> 
+				<h3 class="subtitle ui container">{<?php echo $meta['page_subtitle']; ?>}</h3>
+				<?php endif; ?>
+				<?php  if (is_array($meta) && isset($meta['page_intro'])) : ?> 
+				<div class="intro ui container"><?php echo $meta['page_intro']; ?></div>
+				<?php endif; ?>
 			</div>
-			</div>
-		<?php else: ?>
-			<video id="featured_video" loop muted autoplay preload="auto" poster="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u.jpg" height="270" width="640">
-				<source src="<?php echo get_template_directory_uri(); ?>/assets/video/pho2u.mp4" type="video/mp4">
-				<source src="<?php echo get_template_directory_uri(); ?>/assets/video/pho2u.webm" type="video/webm">
-				<source src="<?php echo get_template_directory_uri(); ?>/assets/video/pho2u.ogv" type="video/ogg">
-				<img src=="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u.png"/>
-			</video>
-			<div id="featured_text">
-				<h2 class="title"><?php the_title(); ?></h2>
-			</div>
-		<?php endif; ?>
 		</div>
 	</div>
 	<div id="content" class="site-content ui main container">
