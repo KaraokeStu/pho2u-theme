@@ -545,16 +545,11 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
-	color: #66CCFF;
-}
-
-a:visited {
-	color: #66CCFF;
-}
+a { color: $pho2uColor; }
+a:visited { color: $pho2uColor; }
 
 a:hover, a:focus, a:active {
-	color: #f5f3f1;
+	color: $pho2uActiveColor;
 }
 
 a:focus {

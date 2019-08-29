@@ -154,7 +154,12 @@ add_action( 'wp_head', 'pho2u_pingback_header' );
 		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
 		$classes[] = 'menu-item-' . $item->ID;
 		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
-		// $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+		if (in_array("current-menu-item", $classes))
+		{
+			$class_names = "active";
+		} else {
+			$class_names = "";
+		}
 		$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
 		$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 		$output .= $indent . '';
@@ -164,10 +169,10 @@ add_action( 'wp_head', 'pho2u_pingback_header' );
 		$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
 		
 		$item_output = $args->before;
-		$item_output .= '<div class="column ' . esc_attr( $class_names ) . '"><a'. $attributes .'>';
+		$item_output .= '<a'. $attributes .' class="item ' . $class_names . '">';
 		
 		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
-		$item_output .= '</a></div>';
+		$item_output .= '</a>';
 		$item_output .= $args->after;
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 		
@@ -178,7 +183,7 @@ add_action( 'wp_head', 'pho2u_pingback_header' );
 }
 
 class pho2u_walker_hidefirst extends Walker_Nav_Menu {
-	static $count = 0;
+	private $count = 0;
 
 	function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat("\t", $depth);
@@ -204,7 +209,7 @@ class pho2u_walker_hidefirst extends Walker_Nav_Menu {
 		$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
 		
 		$item_output = $args->before;
-		if (self::$count==0) {  // if we are in submenu and items count is 1...
+		if ($count==0) {  // if we are in submenu and items count is 1...
 			$item_output .= '<div class="right computer only column ' . esc_attr( $class_names ) . '"><a'. $attributes .'>';
         } else {
 			$item_output .= '<div class="column ' . esc_attr( $class_names ) . '"><a'. $attributes .'>';
@@ -216,7 +221,7 @@ class pho2u_walker_hidefirst extends Walker_Nav_Menu {
 		$item_output .= $args->after;
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 		
-		self::$count++;
+		$count++;
 	}
 	function end_el( &$output, $item, $depth = 0, $args = array() ) {
 		$output .= "\n";
@@ -224,7 +229,7 @@ class pho2u_walker_hidefirst extends Walker_Nav_Menu {
 }
 
 class pho2u_walker_right extends Walker_Nav_Menu {
-	static $count = 0;
+	private $count = 0;
 
 	function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat("\t", $depth);
@@ -240,6 +245,12 @@ class pho2u_walker_right extends Walker_Nav_Menu {
 		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
 		$classes[] = 'menu-item-' . $item->ID;
 		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
+		if (in_array("current-menu-item", $classes))
+		{
+			$class_names = "active";
+		} else {
+			$class_names = "";
+		}
 		// $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 		$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
 		$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
@@ -250,10 +261,10 @@ class pho2u_walker_right extends Walker_Nav_Menu {
 		$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
 		
 		$item_output = $args->before;
-		if (self::$count==0) {  // if we are in submenu and items count is 1...
-			$item_output .= '<div class="right floated column ' . esc_attr( $class_names ) . '"><a'. $attributes .'>';
+		if ($count==0) {  // if we are in submenu and items count is 1...
+			$item_output .= '<div class="item ' . esc_attr( $class_names ) . '"><a'. $attributes .'>';
         } else {
-			$item_output .= '<div class="column ' . esc_attr( $class_names ) . '"><a'. $attributes .'>';
+			$item_output .= '<div class="item ' . esc_attr( $class_names ) . '"><a'. $attributes .'>';
 		}
 		
 		
@@ -262,7 +273,7 @@ class pho2u_walker_right extends Walker_Nav_Menu {
 		$item_output .= $args->after;
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 		
-		self::$count++;
+		$count++;
 	}
 	function end_el( &$output, $item, $depth = 0, $args = array() ) {
 		$output .= "\n";

@@ -2,17 +2,19 @@
 @import './base/var';
 @import './base/base';
 @import './base/typography';
-@import './base/custom';
 
 // layouts
-@import './layouts/grid';
-@import './layouts/segment';
 @import './layouts/container';
+@import './layouts/grid';
 @import './layouts/image';
-
-@import './layouts/placeholder';
 @import './layouts/item';
+@import './layouts/menu';
+@import './layouts/placeholder';
+@import './layouts/segment';
 
 // socicons
-@import './module/socicon'; 
+@import './module/socicon';
+
+// custom
+@import './base/custom';
 

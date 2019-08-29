@@ -28,7 +28,7 @@
 	<div id="fixedmenu" class="custom-background">
 		<header id="masthead" class="site-header">
 		<div class="ui padded grid">
-			<div class="bottom aligned four wide mobile tablet three wide computer column">
+			<div class="bottom aligned four wide mobile three wide tablet three wide computer column">
 				<div class="site-branding">
 					<?php
 					the_custom_logo();
@@ -48,33 +48,31 @@
 					<?php endif; ?>
 				</div><!-- .site-branding -->
 			</div><!-- .four wide column -->
-			<div class="four wide mobile twelve wide tablet thirteen wide computer column">
+			<div class="twelve wide mobile thirteen wide tablet thirteen wide computer column">
 				
-					
-						<nav id="social-navigation" class="social-navigation ui padded grid">
-							<div class="computer tablet only row">
+						<nav id="social-navigation" class="ui text menu">
+							<div class="right menu">
 							<?php
 							wp_nav_menu( array(
 								'theme_location' => 'menu-2',
 								'menu_id'        => 'social-media',
 								'container'		 => false,
 								'items_wrap'	 => '%3$s',
-								'walker'		 => new pho2u_walker_right()
+								'walker'		 => new pho2u_walker()
 							) );
 							?>
 							</div>
 						</nav>
 					
-					
-						<nav id="site-navigation" class="main-navigation ui equal width center aligned grid">
-							<div class="computer tablet only row">
+						<nav id="site-navigation" class="ui inverted secondary pointing menu">
+							<div class="right menu">
 							<?php
 							wp_nav_menu( array(
 								'theme_location' => 'menu-1',
 								'menu_id'        => 'primary-menu',
 								'container'		 => false,
 								'items_wrap'	 => '%3$s',
-								'walker'		 => new pho2u_walker_hidefirst()
+								'walker'		 => new pho2u_walker()
 							) );
 							?>
 							</div>

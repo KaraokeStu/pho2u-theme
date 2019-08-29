@@ -11,13 +11,22 @@
 #featured_text .subtitle { font-size: 1.25 * $scale * 1rem; line-height: 1.25 * $leading; margin: 1.6rem; font-weight: 300; }
 #featured_text .intro { font-size: 0.9 * $scale * 1rem; line-height: 0.9 * $leading; font-weight: 300; }
 
+.ui.secondary.inverted.pointing.menu .item,
+.ui.secondary.inverted.menu a.item,
+.ui.secondary.inverted.menu .link.item,
+.ui.text.menu .item { color: $pho2uColor !important; }
+
+.ui.secondary.inverted.pointing.menu .active.item,
+.ui.text.menu .item:hover,
+.ui.text.menu .item:active { color: $pho2uActiveColor !important; }
+
 /* Mobile */
 @media only screen and (max-width: 320px) {
 	#fixedmenu { height: 3rem; }
 	#page { padding-top: 3rem; }
 	#featured_text { margin-top: -1rem; }
 	#featured_text .title { font-size: 2 * $scale * 1rem; line-height: 2 * $leading; }
-	#featured_text .subtitle { font-size: .5 * $scale * 1rem; line-height: .5 * $leading; margin-top: 1rem;  }
+	#featured_text .subtitle { font-size: .5 * $scale * 1rem; line-height: .5 * $leading; margin-top: 1rem; }
 	#featured_text .intro { display: none; }
 }
 
