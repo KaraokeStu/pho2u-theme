@@ -26,7 +26,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pho2u' ); ?></a>
 	<div id="fixedmenu" class="custom-background">
-		<header id="masthead" class="site-header ui container">
+		<header id="masthead" class="site-header">
 		<div class="ui padded grid">
 			<div class="bottom aligned four wide mobile tablet three wide computer column">
 				<div class="site-branding">
@@ -91,7 +91,7 @@
 		$meta = get_post_meta( $post->ID, 'pho2u_fields', true );
 		wp_reset_query();
 		?>
-		<div class="ui container">
+		<div class="">
 			<?php if ( get_header_image() ) : ?>
 				<img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="ui fluid image">
 			<?php else: ?>
@@ -103,14 +103,14 @@
 				</video>
 			<?php endif; ?>
 			<div id="featured_text">
-				<h2 class="title ui container"><?php the_title(); ?></h2>
+				<h2 class="title"><?php the_title(); ?></h2>
 				<?php  if (is_array($meta) && isset($meta['page_subtitle'])) : ?> 
-				<h3 class="subtitle ui container">{<?php echo $meta['page_subtitle']; ?>}</h3>
+				<h3 class="subtitle">{<?php echo $meta['page_subtitle']; ?>}</h3>
 				<?php endif; ?>
 				<?php  if (is_array($meta) && isset($meta['page_intro'])) : ?> 
-				<div class="intro ui container"><?php echo $meta['page_intro']; ?></div>
+				<div class="intro"><?php echo $meta['page_intro']; ?></div>
 				<?php endif; ?>
 			</div>
 		</div>
 	</div>
-	<div id="content" class="site-content ui main container">
+	<div id="content" class="site-content main">
