@@ -22,11 +22,11 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> onload="javascript:onLoadEvent()">
+<body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pho2u' ); ?></a>
-	<div id="fixedmenu" class="custom-background">
-		<header id="masthead" class="site-header">
+	<div id="fixedmenu" class="ui container custom-background">
+		<header id="masthead" class="site-header ui container">
 		<div class="ui padded grid">
 			<div class="bottom aligned four wide mobile three wide tablet three wide computer column">
 				<div class="site-branding">
@@ -93,14 +93,14 @@
 			<?php if ( get_header_image() ) : ?>
 				<img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="ui fluid image">
 			<?php else: ?>
-				<video id="featured_video" loop muted autoplay preload="auto" poster="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u.jpg" height="270" width="640">
+				<video id="featured_video" loop muted autoplay preload="auto" poster="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u.jpg" height="164" width="640">
 					<source src="<?php echo get_template_directory_uri(); ?>/assets/video/pho2u.mp4" type="video/mp4">
 					<source src="<?php echo get_template_directory_uri(); ?>/assets/video/pho2u.webm" type="video/webm">
 					<source src="<?php echo get_template_directory_uri(); ?>/assets/video/pho2u.ogv" type="video/ogg">
 					<img src=="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u.png"/>
 				</video>
 			<?php endif; ?>
-			<div id="featured_text">
+			<div id="featured_text" class="ui container">
 				<h2 class="title"><?php the_title(); ?></h2>
 				<?php  if (is_array($meta) && isset($meta['page_subtitle'])) : ?> 
 				<h3 class="subtitle">{<?php echo $meta['page_subtitle']; ?>}</h3>
@@ -111,4 +111,4 @@
 			</div>
 		</div>
 	</div>
-	<div id="content" class="site-content main">
+	<div id="content" class="site-content main ui container">

@@ -980,7 +980,7 @@ img.ui.image{display:block}
 #page{padding-top:10rem}
 #content{background-color:#1f1f1f;z-index:100;position:relative}
 #featured{position:relative}
-#featured_video{z-index:-1;width:100%;height:100%}
+#featured_video{z-index:-1;width:100%;height:auto}
 #featured_text{margin:0;position:absolute;top:50%;left:50%;margin-right:-50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);font-family:Lato,sans-serif;text-shadow:0 0 5px rgba(0,0,0,0.8);text-align:center;color:white}
 #featured_text .title{font-size:5.656rem;line-height:6rem;font-weight:300;text-transform:uppercase}
 #featured_text .subtitle{font-size:1.7675rem;line-height:1.875rem;margin:1.6rem;font-weight:300}
