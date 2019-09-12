@@ -29,11 +29,11 @@
 		$custom_logo_id = get_theme_mod( 'custom_logo' );
 		$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 		?>
-		<img src="<?php echo $image[0] ?>" alt="Pho2u! Logo" class="ui image fluid" />	
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo $image[0] ?>" alt="Pho2u! Logo" class="ui image fluid" /></a>
 	</div>
 	<nav id="menu">
 		<div class="mobilelogo_scroll">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u_rectangular.png" alt="Pho2u! Logo" width="100" height="50" />
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u_rectangular.png" alt="Pho2u! Logo" width="100" height="50" /></a>
 		</div>
 		<label for="tm" id="toggle-menu"><h2>&#9776;</h2></label>
 		<input type="checkbox" id="tm">
