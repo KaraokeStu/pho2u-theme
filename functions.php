@@ -114,6 +114,39 @@ function pho2u_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar ( array (
+		'name'			=> __( 'Sitewide Footer (Site Width)', 'pho2u'),
+		'id'			=> 'sidebar-sitewidth',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>'
+	));
+
+	register_sidebar ( array (
+		'name'			=> __( 'Sitewide Footer (Full Width)', 'pho2u'),
+		'id'			=> 'sidebar-fullwidth',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>'
+	));
+	register_sidebar ( array (
+		'name'			=> __( 'Homepage Footer (Site Width)', 'pho2u'),
+		'id'			=> 'sidebar-homesitewidth',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>'
+	));
+
+	register_sidebar ( array (
+		'name'			=> __( 'Homepage Footer (Full Width)', 'pho2u'),
+		'id'			=> 'sidebar-homefullwidth',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>'
+	));
+
+	register_sidebar ( array (
+		'name'			=> __( 'Awards', 'pho2u'),
+		'id'			=> 'sidebar-awards',
+		'before_widget' => '<div id="%1$s" class="column %2$s">',
+        'after_widget'  => '</div>'
+	));
 }
 add_action( 'widgets_init', 'pho2u_widgets_init' );
 
