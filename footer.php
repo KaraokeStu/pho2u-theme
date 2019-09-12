@@ -42,7 +42,7 @@
 	?>
 	<footer id="branding" class="site-footer ui container">
 		<div class="ui center aligned grid">
-			<div class="twelve wide column">&copy; <?php echo date("Y"); ?> - Site Design by <a href="https://fdsoftware.co.uk" target="_blank">FD Software</a></div>
+			<div class="sixteen wide column">&copy; <?php echo date("Y"); ?> - Site Design by <a href="https://fdsoftware.co.uk" target="_blank">FD Software</a></div>
 		</div>
 	</footer>
 
