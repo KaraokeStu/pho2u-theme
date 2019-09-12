@@ -58,14 +58,17 @@
 	#menu h2 { margin: 10px; color: $pho2uActiveColor; }
 	#menu ul { margin: 0; padding: 0; }
 	#menu #responsive-menu { display: none; }
-	#tm:checked + #responsive-menu { display: block; }
+	#tm:checked + #responsive-menu { display: block; border-bottom: 1px solid $pho2uColor; }
 	#tm:checked + #menu h2 { color: $pho2uColor; }
 	#menu input[type="checkbox"] { display: none; }
 
-	.mobilelogo { float: left; max-width: 120px; width: 50%; margin: 10px; position: relative; z-index: 102; }
+	#mobilemenu .mobilelogo { float: left; max-width: 120px; width: 50%; margin: 10px; position: relative; z-index: 103; background: $primaryBackgroundColor; }
+	#mobilemenu .mobilelogo_scroll { float: left; height: 50px; width:100px; margin: 5px; position: relative; z-index: 102; }
+	#mobilemenu .mobilelogo_scroll img { width: 100%; height: 100%; display: inline; }
+
 	#mobilemenu #menu { position: fixed; right: 0; width: 100%; background: $primaryBackgroundColor; z-index: 101; }
 	#mobilemenu #menu label { text-align: right; }
-	#mobilemenu #menu ul { text-align: right; list-style: none; background: $primaryBackgroundColor; z-index: 101; border-left: 1px solid $pho2uColor; border-bottom: 1px solid $pho2uColor; padding: 5px; margin-right: 10px; padding-bottom: 10px; position: relative; }
+	#mobilemenu #menu ul { text-align: right; list-style: none; background: $primaryBackgroundColor; z-index: 101; padding: 5px; padding-right: 15px; padding-bottom: 10px; position: relative; }
 	#mobilemenu #menu ul a { text-decoration: none; }
 	#mobilemenu #menu ul a:hover { color: $pho2uActiveColor; }
 

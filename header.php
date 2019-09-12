@@ -29,9 +29,12 @@
 		$custom_logo_id = get_theme_mod( 'custom_logo' );
 		$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 		?>
-		<img src="<?php echo $image[0] ?>" class="ui image fluid" />
+		<img src="<?php echo $image[0] ?>" alt="Pho2u! Logo" class="ui image fluid" />	
 	</div>
 	<nav id="menu">
+		<div class="mobilelogo_scroll">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u_rectangular.png" alt="Pho2u! Logo" width="100" height="50" />
+		</div>
 		<label for="tm" id="toggle-menu"><h2>&#9776;</h2></label>
 		<input type="checkbox" id="tm">
 		<?php
@@ -42,6 +45,7 @@
 		) );
 		?>
 	</nav>
+	
 </nav>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pho2u' ); ?></a>
