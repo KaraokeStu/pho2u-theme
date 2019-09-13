@@ -20,6 +20,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -31,6 +32,7 @@
 		?>
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo $image[0] ?>" alt="Pho2u! Logo" class="ui image fluid" /></a>
 	</div>
+	<!--
 	<nav id="menu">
 		<div class="mobilelogo_scroll">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u_rectangular.png" alt="Pho2u! Logo" width="100" height="50" /></a>
@@ -44,8 +46,27 @@
 		'container'		 => false
 		) );
 		?>
+	</nav>-->
+	<nav id="menu" class="ui menu stackable">
+		<span class="item header">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u_rectangular.png" alt="Pho2u! Logo" width="100" height="50" /></a>
+		</span>
+		<?php
+		wp_nav_menu( array(
+			'theme_location' => 'menu-1',
+			'menu_id'        => 'primary-menu',
+			'container'		 => false,
+			'items_wrap'	 => '%3$s',
+			'walker'		 => new pho2u_mobile_walker()
+		) );
+		?>
+		<div class="hamburger">
+			<span class="hamburger-bun"></span>
+			<span class="hamburger-patty"></span>
+			<span class="hamburger-bun"></span>
+		</div>
+	</div>
 	</nav>
-	
 </nav>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pho2u' ); ?></a>
@@ -89,7 +110,7 @@
 							</div>
 						</nav>
 					
-						<nav id="site-navigation" class="ui inverted secondary pointing menu">
+						<nav id="site-navigation" class="ui menu">
 							<div class="right menu">
 							<?php
 							wp_nav_menu( array(
@@ -118,11 +139,13 @@
 			<?php if ( get_header_image() ) : ?>
 				<img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="ui fluid image">
 			<?php else: ?>
-				<video id="featured_video" loop muted autoplay preload="auto" poster="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u.jpg" height="164" width="640">
+				<video id="featured_video" playsinline loop muted autoplay preload="auto" poster="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u.jpg" height="164" width="640">
+					<!--
 					<source src="<?php echo get_template_directory_uri(); ?>/assets/video/pho2u.mp4" type="video/mp4">
 					<source src="<?php echo get_template_directory_uri(); ?>/assets/video/pho2u.webm" type="video/webm">
 					<source src="<?php echo get_template_directory_uri(); ?>/assets/video/pho2u.ogv" type="video/ogg">
-					<img src=="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u.png"/>
+					-->
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/pho2u.jpg"/>
 				</video>
 			<?php endif; ?>
 			<div id="featured_text" class="ui container">

@@ -105,15 +105,6 @@ add_action( 'after_setup_theme', 'pho2u_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function pho2u_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'pho2u' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'pho2u' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
 	register_sidebar ( array (
 		'name'			=> __( 'Sitewide Footer (Site Width)', 'pho2u'),
 		'id'			=> 'sidebar-sitewidth',
@@ -161,7 +152,7 @@ function pho2u_scripts() {
 
 	// custom demo_theme_scripts
 	// note that we pass 'customize-preview' into the array();
-	wp_enqueue_script( 'pho2u-custom-scripts', get_template_directory_uri() . '/assets/js/custom.min.js', array('customize-preview'), '20151215', true );
+	wp_enqueue_script( 'pho2u-custom-scripts', get_template_directory_uri() . '/assets/js/custom.min.js', array('jquery', 'customize-preview'), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
