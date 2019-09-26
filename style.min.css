@@ -1242,8 +1242,8 @@ select.ui.dropdown{height:38px;padding:.5em;border:1px solid rgba(34,36,38,0.15)
 .ui.menu .current-menu-item.item,.ui.menu .current-menu-item.item>a,.ui.menu .item:hover>a,.ui.menu item>a:hover,.ui.menu item:hover>.dropdown.icon,.ui.menu .current-menu-item.item>.dropdown.icon{color:#f5f3f1 !important;text-decoration:none}
 .ui.menu .ui.dropdown .menu>.item .dropdown.icon{margin-top:-1em}
 #menu{padding-top:5px;margin-top:0;padding-top:70px;min-height:70px}
-#menu .item.header{padding:10px 5px 0 13px !important;position:fixed;background:#1f1f1f;width:75% !important;top:0;z-index:103}
-#menu .hamburger{position:fixed}
+#menu .item.header{padding:10px 5px 0 13px !important;position:fixed;background:#1f1f1f;width:100% !important;top:0;z-index:103;height:65px}
+#menu .hamburger{position:fixed;z-index:104}
 #mobilemenu #menu{position:fixed;right:0;top:0;width:100%;background:#1f1f1f;z-index:101}
 #mobilemenu #menu .dropdown.icon{display:none}
 #mobilemenu #menu.open ~ .mobilelogo{display:none}
