@@ -16,7 +16,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="ui center aligned grid container">
 			<div class="mobile only row">
-					<nav id="social-navigation-footer" class="social-navigation">
+					<nav id="social-navigation-footer" class="social-navigation mobile">
 						<?php
 								wp_nav_menu( array(
 									'theme_location' => 'menu-2',
